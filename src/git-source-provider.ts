@@ -21,6 +21,7 @@ export async function getSource(settings: IGitSourceSettings): Promise<void> {
   core.info(
     `Repository Url: ${repositoryUrl}`
   )
+
   // Remove conflicting file path
   if (fsHelper.fileExistsSync(settings.repositoryPath)) {
     await io.rmRF(settings.repositoryPath)
