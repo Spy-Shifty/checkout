@@ -19,7 +19,7 @@ export async function getSource(settings: IGitSourceSettings): Promise<void> {
   )
   const repositoryUrl = urlHelper.getFetchUrl(settings)
   core.info(
-    `repositoryUrl: ${repositoryUrl}`
+    `Repository Url: ${repositoryUrl}`
   )
   // Remove conflicting file path
   if (fsHelper.fileExistsSync(settings.repositoryPath)) {
